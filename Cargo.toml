@@ -5,7 +5,10 @@ authors = ["Lane Kolbly <lane@rscheme.org>"]
 edition = "2018"
 build = "build.rs"
 links = "livox_sdk_static"
-
+repository = "https://github.com/lkolbly/livox-sys"
+categories = ["external-ffi-bindings"]
+license = "MIT"
+travis-ci = { repository = "lkolbly/livox-sys" }
 exclude = [
    "src/Livox-SDK/docs/*"
 ]
