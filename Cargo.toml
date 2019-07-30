@@ -6,6 +6,10 @@ edition = "2018"
 build = "build.rs"
 links = "livox_sdk_static"
 
+exclude = [
+   "src/Livox-SDK/docs/*"
+]
+
 [dependencies]
 
 [build-dependencies]
