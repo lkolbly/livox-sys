@@ -1,0 +1,13 @@
+[package]
+name = "livox-sys"
+version = "0.1.0"
+authors = ["Lane Kolbly <lane@rscheme.org>"]
+edition = "2018"
+build = "build.rs"
+links = "livox_sdk_static"
+
+[dependencies]
+
+[build-dependencies]
+bindgen = "0.50"
+cmake = "0.1"

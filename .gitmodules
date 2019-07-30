@@ -1,0 +1,3 @@
+[submodule "src/Livox-SDK"]
+	path = src/Livox-SDK
+	url = https://github.com/Livox-SDK/Livox-SDK.git
