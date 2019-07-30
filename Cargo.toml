@@ -1,6 +1,7 @@
 [package]
 name = "livox-sys"
 version = "0.1.0"
+description = "A Rust wrapper for the Livox SDK"
 authors = ["Lane Kolbly <lane@rscheme.org>"]
 edition = "2018"
 build = "build.rs"
