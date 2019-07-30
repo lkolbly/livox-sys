@@ -3,9 +3,6 @@ use std::path::PathBuf;
 use cmake;
 
 fn main() {
-    println!("cargo:rustc-link-lib=dylib=stdc++");
-    println!("cargo:rustc-link-lib=dylib=boost_system");
-    println!("cargo:rustc-link-lib=dylib=apr-1");
 
     // Run bindgen
     let bindings = bindgen::Builder::default()
@@ -22,4 +19,8 @@ fn main() {
     let dst = cmake::build("src/Livox-SDK");
     println!("cargo:rustc-link-search=native={}/lib", dst.display());
     println!("cargo:rustc-link-lib=static=livox_sdk_static");
+
+    println!("cargo:rustc-link-lib=dylib=stdc++");
+    println!("cargo:rustc-link-lib=dylib=boost_system");
+    println!("cargo:rustc-link-lib=dylib=apr-1");
 }
