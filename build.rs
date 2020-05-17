@@ -16,11 +16,11 @@ fn main() {
         .expect("Couldn't write bindings!");
 
     // Build the Livox SDK
-    let dst = cmake::build("src/Livox-SDK");
-    println!("cargo:rustc-link-search=native={}/lib", dst.display());
+    let dst = cmake::Config::new("src/Livox-SDK")
+        .build_target("livox_sdk_static")
+        .build();
+    println!("cargo:rustc-link-search={}/build/sdk_core", dst.display());
     println!("cargo:rustc-link-lib=static=livox_sdk_static");
 
     println!("cargo:rustc-link-lib=dylib=stdc++");
-    println!("cargo:rustc-link-lib=dylib=boost_system");
-    println!("cargo:rustc-link-lib=dylib=apr-1");
 }
